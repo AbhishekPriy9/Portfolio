@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d1b97def93.js" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        nav {
+            height: 60px;
+            width: 100%;
+            background-color: aliceblue;
+            display: flex;
+            justify-content: space-between;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            padding: 0px 70px;
+        }
+
+        .logo {
+            padding: 15px;
+            letter-spacing: 2px;
+            color: rgb(43, 141, 206);
+        }
+
+        nav ul {
+            display: flex;
+            padding: 11px;
+        }
+
+        nav ul li {
+            padding: 10px;
+            list-style-type: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(43, 141, 206);
+        }
+
+        .main {
+            width: 100%;
+            height: 82vh;
+            background-color: aliceblue;
+            color: aqua;
+            margin-top: 60px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .col1 {
+            color: rgb(43, 141, 206);
+            height: 100vh;
+            width: 50%;
+            padding: 240px;
+        }
+
+        .col2 {
+            height: 100vh;
+            width: 50%;
+            padding: 110px;
+        }
+
+        .abhi {
+            height: 350px;
+            border-radius: 300px;
+        }
+
+        .cbtn {
+            background: none;
+            border: none;
+            color: rgb(75, 46, 70);
+            border: 2px solid blue;
+            padding: 3px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .cbtn:hover {
+            color: rgb(48, 51, 48);
+            border: 2px solid green;
+            background-color: ivory;
+        }
+
+        ul li a:hover {
+            color: black;
+        }
+
+        .more {
+            text-align: center;
+            width: 100%;
+            height: 10vh;
+            background-color: aliceblue;
+        }
+
+        .abhishek {
+            display: none;
+        }
+
+        .about {
+            width: 100%;
+            height: 600px;
+            background-color: rgb(191, 220, 247);
+            display: flex;
+        }
+
+        .aboutme {
+            text-align: center;
+            padding-top: 150px;
+            padding-bottom: 120px;
+            color: rgb(43, 141, 206);
+            letter-spacing: 2px;
+            background-color: rgb(191, 220, 247);
+        }
+
+        .photo {
+            height: 600px;
+            width: 40%;
+            padding-left: 150px;
+        }
+
+        .info {
+            height: 600px;
+            width: 55%;
+            padding-top: 26px;
+            padding-right: 40px;
+            line-height: 30px;
+        }
+
+        .info-head {
+            letter-spacing: 1px;
+        }
+
+        .big {
+            border-radius: 20px;
+        }
+
+        .resume {
+            background-color: aliceblue;
+            color: black;
+            padding: 4px 20px;
+            border: none;
+            border: 2px solid blue;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .resume:hover {
+            background-color: rgb(215, 231, 245);
+            color: black;
+            padding: 4px 20px;
+            border: none;
+            border: 2px solid green;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .form1 {
+            height: 480px;
+            width: 380px;
+            background-color: cyan;
+            margin: auto;
+            margin-top: 10px;
+            border-radius: 15px;
+            text-align: center;
+            padding-top: 50px;
+            box-shadow: rgba(0, 0, 255, 0.8) 0px 10px 36px 0px, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+        }
+
+        #formhead {
+            color: green;
+            letter-spacing: 2px;
+            padding-top: 40px;
+            padding-bottom: 93px;
+        }
+
+        input {
+            border: none;
+            background-color: cyan;
+            border-bottom: 1px solid blue;
+            border-radius: 10px;
+            width: 190px;
+            padding: 3px;
+            margin-top: 7px;
+            margin-bottom: 10px;
+        }
+
+        input:hover {
+            border: 1px solid red;
+        }
+
+        .contactbtn {
+            padding: 5px 20px;
+            cursor: pointer;
+            background-color: cyan;
+            color: darkgreen;
+            border-radius: 10px;
+        }
+
+        button:hover {
+            background-color: cadetblue;
+            color: white;
+        }
+
+        .contactme {
+            width: 100%;
+            height: 600px;
+            background-color: aliceblue;
+            display: flex;
+        }
+
+        .text {
+            width: 45%;
+            height: 600px;
+            background-color: aliceblue;
+            color: rgb(43, 141, 206);
+            padding: 200px;
+            box-sizing: border-box;
+            line-height: 30px;
+            letter-spacing: 1px;
+        }
+
+        .cform {
+            width: 45%;
+            height: 600px;
+        }
+
+        .contact {
+            background-color: aliceblue;
+            color: rgb(43, 141, 206);
+            text-align: center;
+            padding: 60px 200px;
+        }
+
+        .works {
+            text-align: center;
+            background-color: rgb(191, 220, 247);
+            color: rgb(43, 141, 206);
+            padding: 60px 300px;
+            padding-top: 100px;
+        }
+
+        .r_works {
+            width: 100%;
+            height: 500px;
+            background-color: rgb(191, 220, 247);
+            display: flex;
+
+        }
+
+        .projects {
+            width: 30%;
+            height: 500px;
+            padding: 100px;
+            padding-left: 130px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .icons {
+            color: rgb(236, 145, 145);
+            background-color: black;
+            font-size: 100px;
+            background: none;
+        }
+
+        .p_link {
+            text-decoration: none;
+            background: none;
+            border: 2px solid rgb(236, 145, 145);
+            padding: 4px 20px;
+            border-radius: 20px;
+            background-color: rgb(197, 226, 226);
+            color: rgb(43, 141, 206);
+        }
+
+        .w_head {
+            color: rgb(43, 141, 206);
+            letter-spacing: 1px;
+        }
+
+        .footer {
+            text-align: center;
+            width: 100%;
+            height: 70px;
+            background-color: rgb(101, 168, 157);
+        }
+
+        .footer a {
+            font-size: large;
+        }
+
+        .items {
+            padding: 10px;
+            padding-top: 25px;
+            color: rgb(233, 189, 187);
+        }
+
+        @media screen and (max-width:768px) {
+            nav ul {
+                display: none;
+            }
+
+            .main {
+                width: 100%;
+                height: 84vh;
+                display: inline-block;
+            }
+
+            .col1 {
+                color: rgb(85, 163, 163);
+                height: 100vh;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 140px 60px;
+            }
+
+            .col2 {
+                display: none;
+            }
+
+            .abhishek {
+                display: block;
+                border-radius: 20px;
+                height: 50px;
+                padding-top: 6px;
+            }
+
+            nav {
+                padding: 0px 30px;
+            }
+
+            .about {
+                width: 100%;
+                height: 900px;
+                background-color: rgb(191, 220, 247);
+                display: block;
+            }
+
+            .aboutme {
+                text-align: center;
+                padding-top: 50px;
+                padding-bottom: 70px;
+                color: rgb(85, 163, 163);
+                letter-spacing: 2px;
+                background-color: rgb(191, 220, 247);
+            }
+
+            .info {
+                height: 600px;
+                width: 100%;
+                text-align: center;
+            }
+
+            .photo {
+                padding-left: 29px;
+                height: 400px;
+            }
+
+            .info {
+                box-sizing: border-box;
+                padding: 0px 20px;
+                height: 500px;
+            }
+
+            .contact {
+                padding: 50px 100px;
+            }
+
+            .contactme {
+                display: block;
+                height: 730px;
+            }
+
+            .text {
+                width: 100%;
+                height: 120px;
+                color: rgb(85, 163, 163);
+                padding: 20px;
+                box-sizing: border-box;
+                line-height: 25px;
+                letter-spacing: 1px;
+                font-size: small;
+                text-align: center;
+            }
+
+            .cform {
+                width: 100%;
+                height: 600px;
+                box-sizing: border-box;
+                padding: 1px 20px;
+
+            }
+
+            .form1 {
+                height: 480px;
+                width: 100%;
+                background-color: cyan;
+                margin: auto;
+                margin-top: 10px;
+                border-radius: 15px;
+                text-align: center;
+                padding-top: 50px;
+                box-shadow: rgba(0, 0, 255, 0.6) 0px 10px 36px 0px, rgba(0, 0, 0, 0.7) 0px 0px 0px 1px;
+            }
+
+            .r_works {
+                width: 100%;
+                height: 1280px;
+                background-color: rgb(191, 220, 247);
+                display: block;
+            }
+
+            .projects {
+                width: 100%;
+                height: 300px;
+                padding: 100px;
+                box-sizing: border-box;
+                text-align: center;
+            }
+
+            .works {
+                text-align: center;
+                background-color: rgb(191, 220, 247);
+                color: rgb(43, 141, 206);
+                padding: 60px 30px;
+                padding-top: 100px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar  -->
+
+    <nav>
+        <h2 class="logo" id="abhi">ABHISHEK</h2>
+        <img class="abhishek" src="https://i.ibb.co/4J9QmV9/abhi.png" alt="Abhishek Priya">
+        <ul>
+            <li><a href="index.php">HOME</a></li>
+            <li><a href="#contact">CONTACT US</a></li>
+            <li><a href="#r_works">RECENT WORKS</a></li>
+            <li><a href="https://github.com/AbhishekPriy9">GITHUB</a></li>
+        </ul>
+    </nav>
+
+    <!-- main page  -->
+
+    <div class="main">
+        <div class="col1">
+            <h1>Hi <br> I&apos;m Abhishek Priya <br> A web developer.</h1><br>
+            <button class="cbtn">CONTACT ME</button>
+        </div>
+        <div class="col2">
+            <img class="abhi" src="https://i.ibb.co/4J9QmV9/abhi.png" alt="Abhishek Priya">
+        </div>
+    </div>
+
+    <div class="more">
+        <p>See more Info</p>
+        <p>&darr;</p>
+    </div>
+
+    <!-- about page -->
+    <h2 class="aboutme">About Me</h2>
+    <div class="about">
+
+        <div class="photo">
+            <img class="big" src="https://i.ibb.co/4J9QmV9/abhi.png" alt="Abhishek Priya" width="300px" height="378px">
+        </div>
+        <div class="info"><br>
+            <h3 class="info-head">I&apos;m Abhishek Priya and i&apos;m a web developer.</h3><br><br>
+            <p>I am a web developer who has the knowledge of HTML, CSS, JavaScript,<br> Bootstrap, Core PHP, MySql.
+                With the help of these technologies i can work <br> on front-end as well as backend.
+                i have did Diploma from government polytechnic <br> Kanpur. Currently i am living at kanpur.
+            </p><br>
+            <a href="https://drive.google.com/uc?export=download&id=1nVr1Q7Xkgs5WLWAw4sdnSzKGZclIdd3D"><button
+                    class="resume">Download resume</button></a>
+        </div>
+    </div>
+
+    <!-- contact us  -->
+    <h2 class="contact" id="contact">Contact Me</h2>
+    <div class="contactme">
+
+        <div class="text">
+            <h3>You can contact me anytime with the given details.</h3>
+        </div>
+        <div class="cform">
+            <div class="form1">
+                <h2 id="formhead">My Details</h2>
+                <br>
+                <form action="process.php" method="POST">
+                    <label for="name">Name - Abhishek Priya</label><br>
+                    <br><br>
+                    <label for="name">Email - abhishekpriy2010@gmail.com</label><br>
+                    <br><br>
+                    <label for="email">Address - Kushinagar, U.P</label><br>
+                    <br><br>
+                    <br><br><br>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- recent works  -->
+    <h2 class="works" id="r_works">Recent Works</h2>
+    <div class="r_works">
+        <div class="projects">
+            <i class="fas fa-calculator icons"></i><br><br>
+            <h3 class="w_head">Responsive Calculator</h3><br>
+            <a class="p_link" href="https://abhishekpriy9.github.io/responsive_calculator/" target="_blank">See Live</a>
+        </div>
+        <div class="projects">
+            <i class="fas fa-calculator icons"></i><br><br>
+            <h3 class="w_head">PHP Calculator</h3><br>
+            <a class="p_link" href="https://github.com/AbhishekPriy9/PHP_Calculator" target="_blank">See Live</a>
+        </div>
+        <div class="projects">
+            <i class="fas fa-code icons"></i><br><br>
+            <h3 class="w_head">FIZZ-BUZZ PHP Program</h3><br>
+            <a class="p_link" href="https://github.com/AbhishekPriy9/FIZZ-BUZZ-Program-PHP" target="_blank">See Live</a>
+        </div>
+        <div class="projects">
+            <i class="fab fa-wpforms icons"></i><br><br>
+            <h3 class="w_head">Responsive Form</h3><br>
+            <a class="p_link" href="https://abhishekpriy9.github.io/Responsive_form/" target="_blank">See Live</a>
+        </div>
+    </div>
+
+    <!-- footer  -->
+
+    <div class="footer">
+        <a href="https://github.com/AbhishekPriy9" target="_blank"><i class="fab fa-github items"> Github</i></a>
+        <a href="https://www.linkedin.com/in/abhishek-priya-49410a21b/" target="_blank"><i
+                class="fab fa-linkedin items"> LinkedIn</i></a>
+        <a href="https://t.me/TheHunter_95" target="_blank"><i class="fab fa-telegram items"> Telegram</i></a>
+        <a href="https://mobile.twitter.com/IronHulk9911?s=09" target="_blank"><i class="fab fa-twitter items">
+                Twitter</i></a>
+    </div>
+</body>
+
+</html>
